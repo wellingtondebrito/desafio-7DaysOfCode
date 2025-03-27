@@ -1,137 +1,238 @@
 :root {
-    --color-primary: #8E2424;
-    --color-secondary: #667085;
-    --color-white: #fff;
-    --color-gray: #101828;
-    --font-family: "Inter", sans-serif;
-    --font-size-default: 1rem;
-    --font-size-title: 3rem;
-    --font-size-paragraph: 1.25rem; 
-    --font-regular: 400;
-    --font-bold: 600;
-    --font-spacing-default: 1.25rem;
-    --font-spacing-header: 3rem;
-    --button-height: 44px;
-    --button-width: 112px;
-    --border-radius: 8px;
+  --color-primary: #8e2424;
+  --color-secondary: #667085;
+  --color-white: #fff;
+  --color-gray: #101828;
+  --color-badge: #f7d4d4;
+  --font-family: "Inter", sans-serif;
+  --font-size-default: 1rem;
+  --font-size-title: 3rem;
+  --font-size-paragraph: 1.25rem;
+  --font-regular: 400;
+  --font-bold: 600;
+  --font-spacing-default: 1.25rem;
+  --font-spacing-header: 3rem;
+  --button-height: 44px;
+  --button-width: 112px;
+  --border-radius: 8px;
 }
 
 /* Reset e configurações globais */
-*, *:after, *:before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
-    font-size: 100%;
-    list-style-type: none;
-    font-family: var(--font-family);
+  font-size: 100%;
+  list-style-type: none;
+  font-family: var(--font-family);
+}
+
+#main-container {
+  max-width: 1440px; /* Limita o tamanho máximo */
+  width: 100%; /* Garante que ocupe 100% da largura em telas menores */
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  padding: 0 1rem; /* Adiciona espaçamento lateral para telas menores */
 }
 
 /* Header */
 #header-container {
-    background-color: var(--color-white);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.8rem;
+  background-color: var(--color-white);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
 }
 
 #navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 88%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88%;
 }
 
 #navbar-menu {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    gap: 2.5rem;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  gap: 2.5rem;
 }
 
 .menu-link a {
-    color: var(--color-secondary);
-    font-size: var(--font-size-default);
-    font-weight: 500;
-    line-height: 1.5rem;
+  color: var(--color-secondary);
+  font-size: var(--font-size-default);
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 
 /* Botões */
 .button {
-    width: var(--button-width);
-    height: var(--button-height);
-    font-size: var(--font-size-default);
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    border-radius: var(--border-radius);
+  width: var(--button-width);
+  height: var(--button-height);
+  font-size: var(--font-size-default);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
 }
 
 .button-login {
-    background-color: var(--color-white);
-    color: var(--color-secondary);
+  background-color: var(--color-white);
+  color: var(--color-secondary);
 }
 
 .button-sign {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
-#heading-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 96px;
-    padding-bottom: 96px;
-    gap: 24px;
+#heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  gap: 24px;
 }
 
-.labels-text{
-    color: var(--color-primary);
-    font-size: var(--font-size-default);
-    font-family: var(--font-family);
-    font-weight: 600;
-    line-height:1.5rem ;
-    text-align: center;
+.labels-text {
+  color: var(--color-primary);
+  font-size: var(--font-size-default);
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-align: center;
 }
 
-.display-text{
-    font-size: var(--font-size-title);
-    color: var(--color-gray);
-    font-family: var(--font-family);
-    font-weight: var(--font-bold);
-    line-height:3.75rem;
-    text-align: center;
+.display-text {
+  font-size: var(--font-size-title);
+  color: var(--color-gray);
+  font-family: var(--font-family);
+  font-weight: var(--font-bold);
+  line-height: 3.75rem;
+  text-align: center;
 }
 
-.paragraph{
-    color: var(--color-secondary);
-    font-size: var(--font-size-paragraph);
-    font-weight: var(--font-regular);
-    font-family: var(--font-family);
-    text-align: center;
-    line-height: 30px;
+.paragraph {
+  color: var(--color-secondary);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-regular);
+  font-family: var(--font-family);
+  text-align: center;
+  line-height: 30px;
 }
 
+.section-container {
+  display: flex;
+  gap: 64px;
+  padding: 32px;
+  justify-content: center;
+
+  align-content: center;
+}
+
+.info-card {
+  gap: 20px;
+  padding: 16px;
+  width: 280px;
+}
+
+.display-xl {
+  color: var(--color-primary);
+  font-size: var(--font-size-title);
+}
+
+.info-subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-family: var(--font-family);
+}
+
+.info-description {
+  font-size: var(--font-size-default);
+  color: var(--color-secondary);
+  font-weight: var(--font-regular);
+  line-height: 24px;
+}
+
+.small-text {
+  background-color: var(--color-badge);
+  width: 128px;
+  height: 28px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 4px 12px 4px 12px;
+  font-size: 14px;
+  font-family: var(--font-family);
+}
+
+.job-board {
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 1280px;
+}
+
+.job-card{
+  width: 768px;
+  gap: 24px;
+  padding: 24px 24px 28px 24px;
+}
+
+.job-details{
+  width: 768px;
+  background-color: var(--color-white);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eaecf0;
+  margin-top: 24px;
+  border-radius: 16px;
+  padding: 24px 24px 28px 24px;
+}
+
+.job-category{
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-gray);
+  font-family: var(--font-family);
+}
+
+.job-title{
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-gray);
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+
+.job-info{
+  color: var(--color-secondary);
+  font-size: var(--font-size-default);
+  font-family: var(--font-family);
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
-    #navbar-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  #navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    #navbar-menu {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  #navbar-menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    #button-container {
-        margin-top: 1rem;
-    }
+  #button-container {
+    margin-top: 1rem;
+  }
 }
