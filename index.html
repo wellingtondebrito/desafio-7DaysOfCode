@@ -11,6 +11,30 @@
       rel="stylesheet"
     />
     <title>OptimusTech - Desafio HTML | CSS</title>
+    <style>
+      .profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 16px;
+      }
+
+      .profile-image {
+        width: 120px; /* Tamanho da imagem */
+        height: 120px; /* Tamanho da imagem */
+        border-radius: 50%; /* Torna a imagem circular */
+        object-fit: cover; /* Garante que a imagem se ajuste ao contêiner */
+        border: 2px solid var(--color-secondary); /* Adiciona uma borda */
+      }
+
+      .profile-caption {
+        margin-top: 8px;
+        font-size: 14px;
+        color: var(--color-secondary);
+        font-family: var(--font-family);
+      }
+    </style>
   </head>
   <body>
     <main id="main-container">
@@ -96,36 +120,100 @@
           Somos uma equipe 100% remota com pessoas do Brasil inteiro.
         </p>
         <img
-          src="./img/pessoas-imagem.png"
+          src="./img/pessoas-imagem.webp"
           alt="Equipe remota reunida em uma mesa, sorrindo e colaborando em um ambiente descontraído"
         />
         <article class="job-card">
           <h6 class="job-category">Design</h6>
           <div class="job-details">
-            <h6 class="job-title">Product Design</h6>
-            <p class="job-info">Full-time - Faixa Salarial: R$ 7.000</p>
+            <div class="job-info-container">
+              <h6 class="job-title">Product Design</h6>
+              <p class="job-info">Full-time - Faixa Salarial: R$ 7.000</p>
+            </div>
+            <button
+              class="button button-sign"
+              aria-label="Candidatar há uma vaga"
+            >
+              Candidatar
+            </button>
           </div>
           <div class="job-details">
-            <h6 class="job-title">UX Designer</h6>
-            <p class="job-info">Full-time - Faixa Salarial: R$ 6.000</p>
+            <div class="job-info-container">
+              <h6 class="job-title">UX Designer</h6>
+              <p class="job-info">Full-time - Faixa Salarial: R$ 6.000</p>
+            </div>
+            <button
+              class="button button-sign"
+              aria-label="Candidatar há uma vaga"
+            >
+              Candidatar
+            </button>
           </div>
         </article>
         <article class="job-card">
           <h6 class="job-category">Desenvolvimento de Software</h6>
           <div class="job-details">
-            <h6 class="job-title">Desenvolvedor(a) iOS</h6>
-            <p class="job-info">Full-time - Faixa Salarial: R$ 8.000</p>
+            <div class="job-info-container">
+              <h6 class="job-title">Desenvolvedor(a) iOS</h6>
+              <p class="job-info">Full-time - Faixa Salarial: R$ 8.000</p>
+            </div>
+
+            <button
+              class="button button-sign"
+              aria-label="Candidatar há uma vaga"
+            >
+              Candidatar
+            </button>
           </div>
           <div class="job-details">
-            <h6 class="job-title">Desenvolvedor Front-End</h6>
-            <p class="job-info">Full-time - Faixa Salarial: R$ 7.000</p>
+            <div class="job-info-container">
+              <h6 class="job-title">Desenvolvedor Front-End</h6>
+              <p class="job-info">Full-time - Faixa Salarial: R$ 7.000</p>
+            </div>
+            <button
+              class="button button-sign"
+              aria-label="Candidatar há uma vaga"
+            >
+              Candidatar
+            </button>
           </div>
           <div class="job-details">
-            <h6 class="job-title">Desenvolvedor Back-End</h6>
-            <p class="job-info">Full-time - Faixa Salarial: R$ 8.000</p>
+            <div class="job-info-container">
+              <h6 class="job-title">Desenvolvedor Back-End</h6>
+              <p class="job-info">Full-time - Faixa Salarial: R$ 8.000</p>
+            </div>
+            <button
+              class="button button-sign"
+              aria-label="Candidatar há uma vaga"
+            >
+              Candidatar
+            </button>
           </div>
         </article>
       </section>
+      <section id="section-comments">
+        <h6 class="labels-text">
+          Veja o que nossos colaboradores falam sobre nós
+        </h6>
+        <h4 class="display-md">
+          OptimusTech se importa com a saúde dos seus colaboradores e <br>sempre procura nos dar todo tipo de auxílio possível.
+        </h4>
+        <figure class="profile-container">
+          <img src="./img/perfil-img.webp" alt="Foto de perfil da desenvolvedora Julia" class="profile-image" />
+          <figcaption class="profile-caption">Julia, Desenvolvedora Front-End</figcaption>
+        </figure>
+      </section>
+      <footer id="footer-container">
+        <h4 class="display-md">Acompanhe as nossas oportunidades</h4>
+        <p class="paragraph">Seja o primeiro a saber quando novas vagas serão abertas!</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Seu e-mail" aria-label="Digite seu e-mail para receber novidades" required>
+            <button class="button button-sign" aria-label="Cadastrar e-mail">Cadastrar</button>
+        </form>
+        <p class="footer-copyright">
+            <small>&copy; 2025 OptimusTech. Todos os direitos reservados.</small>
+        </p>
+      </footer>
     </main>
   </body>
 </html>
