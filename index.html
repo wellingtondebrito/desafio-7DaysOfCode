@@ -11,30 +11,6 @@
       rel="stylesheet"
     />
     <title>OptimusTech - Desafio HTML | CSS</title>
-    <style>
-      .profile-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-top: 16px;
-      }
-
-      .profile-image {
-        width: 120px; /* Tamanho da imagem */
-        height: 120px; /* Tamanho da imagem */
-        border-radius: 50%; /* Torna a imagem circular */
-        object-fit: cover; /* Garante que a imagem se ajuste ao contêiner */
-        border: 2px solid var(--color-secondary); /* Adiciona uma borda */
-      }
-
-      .profile-caption {
-        margin-top: 8px;
-        font-size: 14px;
-        color: var(--color-secondary);
-        font-family: var(--font-family);
-      }
-    </style>
   </head>
   <body>
     <main id="main-container">
@@ -82,14 +58,14 @@
       </header>
       <section class="section-container">
         <span class="info-card">
-          <h2 class="info-title display-xl">400+</h2>
+          <h2 class="info-title display-xl" data-target="400">0+</h2>
           <p class="info-subtitle">Projetos concluídos</p>
           <p class="info-description">
             Nós ajudamos a construir mais de 400 projetos incríveis
           </p>
         </span>
         <span class="info-card">
-          <h2 class="info-title display-xl">100+</h2>
+          <h2 class="info-title display-xl" data-target="100">0+</h2>
           <p class="info-subtitle">Colaboradores</p>
           <p class="info-description">
             Temos mais de 100 colaboradores no nosso time que se preocupam com
@@ -97,7 +73,7 @@
           </p>
         </span>
         <span class="info-card">
-          <h2 class="info-title display-xl">20k</h2>
+          <h2 class="info-title display-xl" data-target="20000">0k</h2>
           <p class="info-subtitle">Downloads</p>
           <p class="info-description">
             Nossos projetos que estão disponíveis em lojas já foram baixados
@@ -105,7 +81,7 @@
           </p>
         </span>
         <span class="info-card">
-          <h2 class="info-title display-xl">500+</h2>
+          <h2 class="info-title display-xl" data-target="500">0+</h2>
           <p class="info-subtitle">Reviews 5 estrelas</p>
           <p class="info-description">
             Estamos orgulhosos de contar com mais de 500 reviews 5 estrelas em
@@ -214,6 +190,7 @@
             <small>&copy; 2025 OptimusTech. Todos os direitos reservados.</small>
         </p>
       </footer>
+      <script src="./js/scripts.js" defer></script>
     </main>
   </body>
 </html>
